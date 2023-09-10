@@ -20,7 +20,14 @@ const resolvers = {
     // It's not used as frequently as the others, but it can be useful for more
     // advanced actions like setting cache policies at the resolver level.
 
-    tracksForHome: () => {},
+    tracksForHome: (_, __, { dataSources }) => {
+      return dataSources.trackAPI.getTracksForHome();
+    },
+  },
+  Track: {
+    author: ({ authorId }, _, { dataSources }) => {
+      return dataSources.trackAPI.getAuthor(authorId);
+    },
   },
 };
 
