@@ -6,6 +6,8 @@ const typeDefs = gql`
     tracksForHome: [Track!]!
     "Get a specific track, provided a track's ID"
     track(id: ID!): Track
+    "Get a specific module, provided a module's ID"
+    module(id: ID!): Module
   }
   type Mutation {
     "Increment the track's number of views, provided a track's ID"
@@ -48,6 +50,8 @@ const typeDefs = gql`
     title: String!
     "The Module's length in minutes"
     length: Int
+    content: String
+    videoUrl: String
   }
 `;
 
