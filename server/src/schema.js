@@ -16,6 +16,10 @@ const typeDefs = gql`
     length: Int
     "The number of modules this track contains"
     modulesCount: Int
+    "The track's description, can be in Markdown format"
+    description: String
+    numberOfViews: Int
+    modules: [Module!]!
   }
   type Author {
     id: ID!
@@ -23,6 +27,12 @@ const typeDefs = gql`
     name: String!
     "Author's profile picture url"
     photo: String
+  }
+  type Module {
+    id: ID!
+    title: String!
+    "The Module's length in minutes"
+    length: Int
   }
 `;
 
