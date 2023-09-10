@@ -15,6 +15,12 @@ npm install @apollo/server graphql graphql-tag
 npm install @graphql-tools/mock @graphql-tools/schema
 ```
 
+- `@apollo/datasource-rest`: Used for fetching data from a REST API and exposing it via GraphQL within Apollo Server. [fetching](https://www.apollographql.com/docs/apollo-server/data/fetching-rest/)
+
+```bash
+npm install @apollo/datasource-rest
+```
+
 ## Extensions
 
 - `GraphQL: Syntax Highlighting`: Adds syntax highlighting support for .graphql & embedded support for javascript, typescript, vue, markdown, python, php, reason, ocaml and rescript. [here](https://marketplace.visualstudio.com/items?itemName=GraphQL.vscode-graphql-syntax)
